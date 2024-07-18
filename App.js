@@ -2,6 +2,7 @@ import {s} from "./App.style";
 import {  Text, View } from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from "react-native-safe-area-context";
 import {Dimensions, LogBox} from "react-native";
+import {List} from "./components/List/List";
 
 export default function App() {
 
@@ -11,8 +12,9 @@ export default function App() {
   return (
       <SafeAreaProvider>
         <SafeAreaView style={s.container}>
-          <View  >
-            <Text style={s.txt}>Hello World!</Text>
+          <View  style={{flex: 1, width:SCREEN_W}} >
+
+           <List screenWidth={SCREEN_W}/>
           </View>
         </SafeAreaView>
       </SafeAreaProvider>
