@@ -1,31 +1,35 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-### Jetbrains IDE ###
-.idea/
-*.iml
+# dependencies
+node_modules/
 
-### Dependency directories ###
-/node_modules
+# Expo
+.expo/
+dist/
+web-build/
 
-### Expo ###
-/.expo/
-expo-debug.keystore
-ux
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
 
-### Logs ###
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Metro
+.metro-health-check*
 
-### OS generated files ###
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+*.pem
 
-### Build generated files ###
-ios/build/
-android/build/
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
