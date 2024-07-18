@@ -1,4 +1,4 @@
-import {s} from "./ListItem.style.style";
+import {s} from "./ListItem.style";
 export function ListItem() {
 
 
