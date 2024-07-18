@@ -3,6 +3,7 @@ import {  Text, View } from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from "react-native-safe-area-context";
 import {Dimensions, LogBox} from "react-native";
 import {List} from "./components/List/List";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function App() {
 
@@ -12,10 +13,13 @@ export default function App() {
   return (
       <SafeAreaProvider>
         <SafeAreaView style={s.container}>
-          <View  style={{flex: 1, width:SCREEN_W}} >
+            <GestureHandlerRootView style={{ flex: 1 }}>
+                <List screenWidth={SCREEN_W}/>
+            </GestureHandlerRootView>
+          {/*<View  style={{flex: 1, width:SCREEN_W}} >*/}
 
-           <List screenWidth={SCREEN_W}/>
-          </View>
+
+          {/*</View>*/}
         </SafeAreaView>
       </SafeAreaProvider>
 
