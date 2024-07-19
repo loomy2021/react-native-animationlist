@@ -9,7 +9,9 @@ import {useSharedValue} from "react-native-reanimated";
 export default function App() {
 
 
-    const { width: SCREEN_W, height: SCREEN_H } = Dimensions.get("screen");
+
+    const screenWidth = Dimensions.get('screen').width;
+    const screenHeight = Dimensions.get('screen').height;
 
 
 
@@ -17,7 +19,7 @@ export default function App() {
       <SafeAreaProvider>
         <SafeAreaView style={s.container}>
             <GestureHandlerRootView style={{ flex: 1 }}>
-                <List screenWidth={SCREEN_W} />
+                <List screenWidth={screenWidth} screenHeight={screenHeight} />
             </GestureHandlerRootView>
           {/*<View  style={{flex: 1, width:SCREEN_W}} >*/}
 
